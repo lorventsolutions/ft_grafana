@@ -40,6 +40,9 @@
     "stoploss_on_exchange": false
   },
   "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
     "ccxt_config": {
       "enableRateLimit": true
     },
