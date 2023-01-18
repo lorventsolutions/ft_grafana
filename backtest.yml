@@ -10,7 +10,7 @@ services:
     container_name: backtest
     restart: on-failure
     ports:
-      - 8081:8081
+      - 6061:6061
     volumes:
       - ./user_data:/freqtrade/user_data
     command: >
