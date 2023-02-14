@@ -5,7 +5,7 @@
       "secret":""
    },
    "dry_run":true,
-   "dry_run_wallet":2500,
+  "dry_run_wallet": 1000,
    "telegram":{
       "enabled":false,
       "token":"",
