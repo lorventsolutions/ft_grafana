@@ -8,35 +8,35 @@
   "dry_run_wallet": 1000,
    "cancel_open_orders_on_exit":false,
    "unfilledtimeout":{
-      "buy":10,
-      "sell":30,
+      "entry": 10,
+      "exit": 30,
       "unit":"minutes"
-   },
-   "bid_strategy":{
-      "price_side":"ask",
-      "ask_last_balance":0.0,
-      "use_order_book":false,
-      "order_book_top":1,
-      "check_depth_of_market":{
-         "enabled":false,
-         "bids_to_ask_delta":1
-      }
-   },
-   "ask_strategy":{
-      "price_side":"bid",
-      "use_order_book":false,
-      "order_book_min":1,
-      "order_book_max":1,
-      "use_exit_signal": true,
-      "exit_profit_only": false,
-      "ignore_roi_if_entry_signal": false
+  },
+  "entry_pricing": {
+    "price_side": "ask",
+    "ask_last_balance": 0.0,
+    "use_order_book": false,
+    "order_book_top": 1,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "bid",
+    "exit_profit_only": false,
+    "use_order_book": false,
+    "order_book_min": 1,
+    "order_book_max": 1,
+    "use_exit_signal": true,
+    "ignore_roi_if_entry_signal": false
    },
    "order_types": {
-		"buy": "limit",
-		"sell": "market",
-		"emergencysell": "market",
-		"forcebuy": "market",
-		"forcesell": "market",
+    "entry": "limit",
+    "exit": "market",
+    "emergency_exit": "market",
+    "force_entry": "market",
+    "force_exit": "market",
 		"stoploss": "market",
 		"stoploss_on_exchange": false
 	},
@@ -123,7 +123,7 @@
    },
    "bot_name":"freqtrade",
    "initial_state":"running",
-   "forcebuy_enable":false,
+  "force_entry_enable": false,
    "internals":{
       "process_throttle_secs":5
    }
